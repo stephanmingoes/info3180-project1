@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="prop-container">
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ url_for('static', filename=property.photo) }}" alt="{{ property.title }}">
+        </div>
+        <div class="card-content">
+            <h3>{{ property.title }}</h3>
+            <div class="property-price-type">
+                <p class="pprice">${{ property.price }}</p>
+                <p class="ptype">{{ property.property_type }}</p>
+            </div>
+            <p>{{ property.description }}</p>
+            <div class="card-features">
+                <span><i class="fa-solid fa-bed"></i> {{ property.num_bedrooms }} Bedrooms</span>
+                <span><i class="fa-solid fa-shower"></i> {{ property.num_bathrooms }} Bathrooms</span>
+            </div>
+            <p><i class="fa-solid fa-location-dot"></i> {{ property.location }}</p>
+            <a href="mailto:realtor@example.com" class="contact-realtor">Email Realtor</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

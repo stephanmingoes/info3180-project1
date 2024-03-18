@@ -1,0 +1,71 @@
+
+.profile {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.profile .header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(113, 184, 113);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.profile img{
+    width: 150px;
+    border-radius: 100%;
+}
+
+.profile .content {
+    padding-top: 1rem;
+    margin-left: 3rem ;
+    margin-right: 3rem;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile .content .stats {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+.profile .content .stats div {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile .content .stats div .value {
+     font-weight: bold;
+     color: black;
+     font-size: 1.2rem;
+}
+
+.profile .action {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+   
+}
+
+.profile .action button {
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    width: 125px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(0, 186, 0);
+}

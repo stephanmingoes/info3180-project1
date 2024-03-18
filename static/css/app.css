@@ -1,0 +1,198 @@
+body {
+    padding-top: 5rem;
+    background-color: #f5f5f5;
+}
+
+.background-teal {
+    background-color: teal;
+}
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.property {
+    background-color: white;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.property-image {
+  height: 150px;
+}
+
+.property-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.property-content {
+    padding: 10px;
+    height: 200px;
+    margin-bottom: 50px;
+
+}
+
+.property-content h2 {
+    font-size: 20px;
+}
+.view-prop-btn {
+    width: 100%;
+    position: absolute;
+    background-color: teal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.view-prop-btn:hover {
+    color: white;
+}
+.location-span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    color: grey;
+}
+
+.property-price {
+    background-color: #0d6efd;
+    color: white;
+    width: max-content;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+
+.card {
+  width: 900px; /* Adjust width as needed */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-image {
+  position: relative;
+    /*width: 500px;*/
+  overflow: hidden;
+    flex: 1;
+}
+
+.card-image img {
+  width: 100%;
+    height: 100%;
+  /*height: 200px; !* Adjust height as needed *!*/
+  object-fit: cover; /* Scales image to fill container */
+}
+
+.card-content {
+  padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-features {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.card-features span {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.card-content p {
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: white;
+    background-color: teal;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.card-content a:hover {
+  color: white;
+}
+
+.property-price-type {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.pprice {
+    background-color: #0d6efd;
+    color: white;
+    padding: 8px  15px;
+    border-radius: 20px;
+}
+.ptype {
+    background-color:  #ffc720;
+    color: white;
+    padding: 8px  15px;
+    border-radius: 20px;
+}
+
+.prop-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 800px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .property-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

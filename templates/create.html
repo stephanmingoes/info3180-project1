@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Add New Property</h1>
+
+    <div class="form-container">
+         {% with messages = get_flashed_messages(with_categories=True) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="alert alert-{{ category }}">
+          {{ message }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+        <form method="post" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    {{ form.title(size=60, class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    {{ form.description(rows=4, class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="num_bedrooms">Number of Bedrooms:</label>
+    {{ form.num_bedrooms(type="number", class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="num_bathrooms">Number of Bathrooms:</label>
+    {{ form.num_bathrooms(type="number", class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location:</label>
+    {{ form.location(size=60, class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="property_type">Property Type:</label>
+    {{ form.property_type(class="form-control") }}
+  </div>
+
+  <div class="form-group">
+    <label for="photo">Photo:</label>
+    {{ form.photo(type="file", class="form-control-file") }}
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    {{ form.price(type="number", class="form-control") }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Property</button>
+</form></div>
+
+
+{% endblock %}
